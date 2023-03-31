@@ -1,0 +1,25 @@
+ 1  sudo apt-get update
+    2  sudo apt-get install network-manager
+    3  resolvectl status
+    4  sudo vim /etc/systemd/resolved.conf
+    5  sudo systemctl restart NetworkManager
+    6  sudo resolvectl flush-caches
+    7  resolvectl query google.com
+    8  sudo vim /etc/systemd/resolved.conf
+    9  sudo systemctl restart NetworkManager
+   10  resolvedctl status
+   11  sudo vim /etc/systemd/resolved.conf
+   12  sudo systemctl restart systemd-resolved
+   13  resolvectl query google.com
+   14  exit
+   15  sudo resolvectl flush-caches
+   16  resolvectl query google.com
+   17  exit
+   18  history
+   19  exit
+   20  resolvectl status
+   21  resolvectl query google.com
+   22  exit
+   23  history
+   24  resolvectl query google.com
+   25  history
