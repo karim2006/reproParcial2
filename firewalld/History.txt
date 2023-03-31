@@ -1,0 +1,227 @@
+    1  yum install vim
+    2  exit
+    3  firewall-cmd --zone=dmz --list-all
+    4  firewall -cmd --zone=dmz --list-all
+    5  firewall-cmd --zone=dmz --list-all
+    6  service firewalld start
+    7  firewall-cmd --zone=dmz --list-all
+    8  firewall-cmd --set-default-zone=dmz
+    9  firewall-cmd --zone=dmz --remove-interface=eth2 --permanent
+   10  firewall-cmd --zone=dmz --remove-interface=eth2
+   11  firewall-cmd --zone=dmz --add-interface=eth1
+   12  firewall-cmd --zone=dmz --add-interface=eth1  --permanent
+   13  firewall-cmd --zone=dmz --add-interface=eth1
+   14  firewall-cmd --zone=dmz --add-service=http --permanent
+   15  firewall-cmd --zone=dmz --add-service=https --permanent
+   16  firewall-cmd --reload
+   17  firewall-cmd --zone=dmz --list-all
+   18  firewall-cmd --zone=dmz --remove-interface=eth2
+   19  firewall-cmd --zone=dmz --list-all
+   20  firewall-cmd --zone=dmz --remove-interface=eth0
+   21  firewall-cmd --zone=dmz --list-all
+   22  firewall-cmd --zone=internal --add-interface=eth2 --permanent
+   23  firewall-cmd --zone=internal --add-interface=eth2
+   24  firewall-cmd --zone=internal --add-interface=eth2 --permanent
+   25  service firewalld start
+   26  firewall-cmd --zone=internal --add-interface=eth2 --permanent
+   27  firewall-cmd --zone=internal --add-interface=eth2
+   28  firewall-cmd --reload
+   29  firewall-cmd --zone=internal --list-all
+   30  firewall-cmd --get-active-zones
+   31  firewall-cmd --zone=dmz --remove-interface=eth0
+   32  firewall-cmd --zone=internal --list-all
+   33  firewall-cmd --get-active-zones
+   34  yum install httpd
+   35  firewall-cmd --zone=dmz --list-all
+   36  clear
+   37  firewall-cmd --reload
+   38  firewall-cmd --zone=dmz --list-all
+   39  sudo firewall-cmd --zone=dmz --remove-interface=eth2 --
+   40  permanent
+   41  sudo firewall-cmd --zone=dmz --remove-interface=eth0
+   42  sudo firewall-cmd --zone=public --add-interface=eth0 –-permanent
+   43  sudo firewall-cmd --zone=public --add-interface=eth0 --permanent
+   44  firewall-cmd --zone=dmz --list-all
+   45  exit
+   46  firewall-cmd --zone=dmz --list-all
+   47  service firewalld start
+   48  firewall-cmd --zone=dmz --list-all
+   49  firewall-cmd --zone=internal --add-interface=eth2 --permanent
+   50  firewall-cmd --zone="dmz" --add-forward-port=port=443:proto=tcp:toport=443:toaddr=192.168.100.4 --permanent
+   51  sudo firewall-cmd --zone=dmz --add-icmp-block=echo-request --permanent
+   52  sudo firewall-cmd --zone=dmz --add-masquerade
+   53  sudo firewall-cmd --zone=internal --add-masquerade
+   54  firewall-cmd --zone=dmz --list-all
+   55  firewall-cmd --zone="dmz" --add-forward-port=port=443:proto=tcp:toport=443:toaddr=192.168.100.4 --permanent
+   56  sudo firewall-cmd --reload
+   57  service firewalld start
+   58  firewall-cmd --zone=dmz --list-all
+   59  sudo firewall-cmd --zone=dmz --add-masquerade --permanent
+   60  sudo firewall-cmd --zone=internal --add-masquerade --permanent
+   61  sudo firewall-cmd --reload
+   62  service firewalld start
+   63  firewall-cmd --zone=dmz --list-all
+   64  service firewalld start
+   65  sudo firewall-cmd --reload
+   66  firewall-cmd --zone=dmz --list-all
+   67  vim /etc/httpd/conf/
+   68  rpm –q httpd
+   69  yum install httpd
+   70  cd /var/www/html
+   71  vim index.html
+   72  chmod 755 index.html
+   73  sudo firewall-cmd --reload
+   74  ls
+   75  service httpd start
+   76  cd
+   77  yum install openssl
+   78  yum install mod_ssl
+   79  apachectl –M | grep ssl
+   80  openssl genrsa -out ca.key 2048
+   81  openssl req -new -key ca.key -out ca.csr
+   82  openssl x509 -req -days 365 -in ca.csr -signkey ca.key -out ca.crt
+   83  cp ca.crt /etc/pki/tls/certs/
+   84  cp ca.key ca.csr /etc/pki/tls/private/
+   85  chmod 600 /etc/pki/tls/certs/ca.crt
+   86  chmod 600 /etc/pki/tls/private/ca.key
+   87  chmod 600 /etc/pki/tls/private/ca.csr
+   88  vim  /etc/httpd/conf.d/ssl.conf
+   89  vim /etc/httpd/conf/httpd.conf
+   90  service httpd restart
+   91  history
+   92  cls
+   93  exit
+   94  firewall-cmd --get-zones-actives
+   95  service firewalld start
+   96  service firewalld status
+   97   firewall-cmd --get-active-zones
+   98  ifconfig
+   99  service httpd status
+  100  service httpd start
+  101  service vsftpd start
+  102  cd /usr/lib/firewalld/services
+  103  ls
+  104  firewall-cmd --reload
+  105  firewall-cmd --zone="dmz" --add-forward-port=port=40000-50000:proto=tcp:toport=40000-50000:toaddr=192.168.50.3 --permanent
+  106  firewall-cmd --zone="dmz" --list-all
+  107  firewall-cmd --zone=dmz --add-service=ftp --permanent
+  108  firewall-cmd --zone=dmz --add-port=21/tcp --permanent
+  109  sudo firewall-cmd --zone=dmz --add-masquerade
+  110  firewall-cmd --zone=dmz --add-masquerade
+  111  firewall-cmd --zone="dmz" --list-all
+  112  history
+  113  firewall-cmd --zone=dmz --add-interface=eth0
+  114  firewall-cmd --zone="dmz" --list-all
+  115   sudo firewall-cmd --zone=public --add-interface=eth0
+  116   firewall-cmd --zone=public --add-interface=eth0
+  117    firewall-cmd --zone=dmz --list-all}
+  118    firewall-cmd --zone=dmz --list-all
+  119  sudo firewall-cmd --zone=dmz --add-interface=eth0 -- permanent
+  120  sudo firewall-cmd --zone=dmz --add-interface=eth0 --permanent
+  121    firewall-cmd --zone=dmz --list-all
+  122  firewall-cmd --reload
+  123    firewall-cmd --zone=dmz --list-all
+  124  firewall-cmd --zone=dmz --add-port=20/tcp --permanent
+  125  firewall-cmd --reload
+  126    firewall-cmd --zone=dmz --list-all
+  127   firewall-cmd --zone="dmz" --add-forward-port=port=21:proto=tcp:toport=21:toaddr=192.168.50.3 --permanent
+  128  firewall-cmd --reload
+  129    firewall-cmd --zone=dmz --list-all
+  130  cd /usr/lib/firewall
+  131  cd
+  132  cd /usr/lib/firewall
+  133  service firewalld start
+  134  cd /usr/lib/firewall
+  135  service firewalld status
+  136  clear
+  137  history
+  138  firewall-cmd --get-zones-actives
+  139   firewall-cmd --get-active-zones
+  140   service firewalld status
+  141   firewall-cmd --get-active-zones
+  142  service httpd start
+  143  service httpd status
+  144   service httpd restart
+  145   service httpd status
+  146   service firewalld restart
+  147   service firewalld status
+  148  cd /usr/lib/firewall
+  149  ls
+  150  cd services
+  151  vim ftp.xml
+  152   cd /usr/lib/firewalld
+  153  vim ftp.xml
+  154  cd /usr/lib/firewalld/services
+  155  ls
+  156  vim ftp.xml
+  157  firewall-cmd --zone=dmz --add-port=40000-50000/tcp --permanent
+  158  firewall-cmd --reload
+  159    firewall-cmd --zone=dmz --list-all
+  160  service vsftpd status
+  161  history
+  162  service vsftpd status
+  163  rpm -q vsftpd
+  164  yum install vsftpd -y
+  165  service vsftpd start
+  166  rpm -q vsftpd
+  167  vim /etc/vsftpd/vsftpd.conf
+  168  service vsftpd restart
+  169  service vsftpd status
+  170  service firewalld stop
+  171  cd
+  172  cd /etc/vsftpd
+  173  ls
+  174  mkdir chroot_list
+  175  vim chroot_list
+  176  ls
+  177  rmdir chroot_list
+  178  ls
+  179  vim chroot_list
+  180  ls
+  181  vim chroot_list
+  182  cd
+  183  service firewalld start
+  184  cd /etc/vsftpd
+  185  ls
+  186  vim chroot_list
+  187  firewall-cmd --zone="dmz" --list-all
+  188  vim /etc/vsftpd/vsftpd.conf
+  189  vim /etc/vsftpd
+  190  cd
+  191  cd /etc/vsftpd
+  192  ls
+  193  vim chroot_list
+  194  service firewalld restart
+  195  ls
+  196  firewall-cmd --zone="dmz" --list-all
+  197  firewall-cmd --zone="dmz" --remove-forward-port=port=40000-50000:proto=tcp:toport=40000-50000:toaddr=192.168.50.3 --permanent
+  198  firewall-cmd --zone="dmz" --remove-forward-port=port=40000-50000:proto=tcp:toport=21:toaddr=192.168.50.3 --permanent
+  199  firewall-cmd --zone="dmz" --remove-forward-port=port=21:proto=tcp:toport=21:toaddr=192.168.50.3 --permanent
+  200  firewall-cmd --reload
+  201  firewall-cmd --zone="dmz" --list-all
+  202  firewall-cmd --zone=dmz --remove-port=40000-50000/tcp --permanent
+  203  firewall-cmd --reload
+  204  firewall-cmd --zone="dmz" --list-all
+  205  cd /usr/lib/firewalld/services
+  206  ls
+  207  vim ftp.xml
+  208  firewall-cmd --reload
+  209  firewall-cmd --zone="dmz" --list-all
+  210  firewall-cmd --zone=dmz --add-port=1024-50000/tcp --permanent
+  211  firewall-cmd --zone="dmz" --add-forward-port=port=1024-50000:proto=tcp:toport=1024-50000:toaddr=192.168.100.4 --permanent
+  212  firewall-cmd --reload
+  213  firewall-cmd --zone="dmz" --list-all
+  214  firewall-cmd --zone="dmz" --add-forward-port=port=20:proto=tcp:toport=20:toaddr=192.168.100.4 --permanent
+  215  firewall-cmd --reload
+  216  firewall-cmd --zone="dmz" --list-all
+  217  firewall-cmd --zone="dmz" --add-forward-port=port=21:proto=tcp:toport=21:toaddr=192.168.100.4 --permanent
+  218  firewall-cmd --reload
+  219  firewall-cmd --zone="dmz" --list-all
+  220  service firewalld restart
+  221  service vsftpd restart
+  222  exit
+  223  service firewalld start
+  224  service vsftpd restart
+  225  firewall-cmd --set-default-zone=dmz
+  226  exit
+  227  history

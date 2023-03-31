@@ -1,0 +1,76 @@
+ 1  cls
+    2  exit
+    3  yum install vim
+    4  exit
+    5  yum install httpd
+    6  cd /var/www/html
+    7  vim index.html
+    8  chmod 755 index.html
+    9  ls
+   10  firewall-cmd --zone=dmz --list-all
+   11  service firewall start
+   12  cd
+   13  service firewalld start
+   14  firewall-cmd --zone=dmz --list-all
+   15  exit
+   16  service htppd start
+   17  service httpd start
+   18  yum install openssl
+   19  yum install mod_ssl
+   20  apachectl –M | grep ssl
+   21  openssl genrsa -out ca.key 2048
+   22  openssl req -new -key ca.key -out ca.csr
+   23  openssl x509 -req -days 365 -in ca.csr -signkey ca.key -out ca.crt
+   24  cp ca.crt /etc/pki/tls/certs/
+   25  cp ca.key ca.csr /etc/pki/tls/private/
+   26  chmod 600 /etc/pki/tls/certs/ca.crt
+   27  chmod 600 /etc/pki/tls/private/ca.key
+   28  chmod 600 /etc/pki/tls/private/ca.csr
+   29  vim  /etc/httpd/conf.d/ssl.conf
+   30   vim /etc/httpd/conf/httpd.conf
+   31  service httpd restart
+   32  ls
+   33  yum install vsftpd -y
+   34  vim /etc/vsftpd/vsftpd.conf
+   35  ls
+   36  cd /etc/pki/tls/certs
+   37  ls
+   38  cd /etc/pki/tls/private
+   39  ls
+   40  service restart vsftpd
+   41  service vsftpd restart
+   42  cd
+   43  yum install wget -y
+   44  exit
+   45  history
+   46  service httpd start
+   47  service vsftpd start
+   48  service vsftpd status
+   49  service httpd restart
+   50  firewall-cmd --zone=dmz --list-all
+   51  service vsftpd start
+   52  service vsftpd restart
+   53  ifconfig
+   54  exit
+   55  ifconfig
+   56  vim /etc/vsftp
+   57  cd /etc/vsftp
+   58  service vsftpd start
+   59  cd /etc/vsftpd
+   60  ls
+   61  vim chroot_list
+   62  service vsftpd restart
+   63  cd /home/vagrant
+   64  ls
+   65  service vsftpd restart
+   66  service firewalld status
+   67  cd /home/vagrant
+   68  ls
+   69  exit
+   70  service vsftpd start
+   71  firewall-cmd --set-default-zone=dmz
+   72  sudo install git -y
+   73  sudo yum install git -y
+   74  git
+   75  cd /etc/vsftp
+   76  history

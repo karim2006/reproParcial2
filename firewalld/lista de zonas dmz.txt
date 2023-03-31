@@ -1,0 +1,19 @@
+[root@firewall services]# firewall-cmd --zone="dmz" --list-all
+
+dmz (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: eth0 eth1 eth2
+  sources:
+  services: ftp http https ssh
+  ports: 21/tcp 20/tcp 1024-50000/tcp
+  protocols:
+  masquerade: yes
+  forward-ports:
+        port=443:proto=tcp:toport=443:toaddr=192.168.100.4
+        port=1024-50000:proto=tcp:toport=1024-50000:toaddr=192.168.100.4
+        port=20:proto=tcp:toport=20:toaddr=192.168.100.4
+        port=21:proto=tcp:toport=21:toaddr=192.168.100.4
+  source-ports:
+  icmp-blocks: echo-request
+  rich rules:
